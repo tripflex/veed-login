@@ -154,3 +154,9 @@ fieldset[disabled] .btn-warning.active {
     color: #f0d256;
     background-color: #ffffff;
 }
+
+@media (max-width: 970px) { 
+    .veed-footer > .col-md-8 {
+        margin-top: 15px;
+    }
+}
