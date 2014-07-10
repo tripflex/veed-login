@@ -1,17 +1,12 @@
 function resizeBg() {
 
     var view_height = $(window).height();
-//    var quote_height = $('.corner-caption').height();
-//    var carousel_height = $('.veed-carousel-content').height();
-//    var top_offset = $('.veed-carousel-content').offset().top;
-//    var howitworks_height = $('.veed-howitworks-wrap').height();
-//
-//    var others_height = (quote_height + top_offset + howitworks_height);
-//    var carousel_cap_height = (view_height - others_height);
-//
-//    $('.carousel-caption').height(carousel_cap_height + 'px');
+    var quote_height = $('.corner-caption').height();
+    var carousel_row_height = $('.veed-carousel-row').height();
+
+    var bg_content_height = (quote_height + carousel_row_height);
     
-    $('#bg').css('height', view_height);
+    $('#bg').css('height', view_height).css('min-height', bg_content_height);
 
 }
 
