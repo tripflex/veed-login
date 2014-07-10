@@ -1,59 +1,56 @@
+function resizeBg() {
+
+    var view_height = $(window).height();
+//    var quote_height = $('.corner-caption').height();
+//    var carousel_height = $('.veed-carousel-content').height();
+//    var top_offset = $('.veed-carousel-content').offset().top;
+//    var howitworks_height = $('.veed-howitworks-wrap').height();
+//
+//    var others_height = (quote_height + top_offset + howitworks_height);
+//    var carousel_cap_height = (view_height - others_height);
+//
+//    $('.carousel-caption').height(carousel_cap_height + 'px');
+    
+    $('#bg').css('height', view_height);
+
+}
+
+function showLogIn() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+
+    $('.veed-login-toggle').data('login', 'signup');
+
+    $('#password2').fadeOut('slow');
+    $('#name').fadeOut('slow');
+
+    $('.veed-login-toggle').html('Return to signup');
+    $('#veed-signup').html('Login');
+
+}
+
+function showSignUp() {
+
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+
+    $('.veed-login-toggle').data('login', 'login');
+
+    $('#password2').fadeIn('slow');
+    $('#name').fadeIn('slow');
+
+    $('#veed-signup').html('Sign Up');
+    $('.veed-login-toggle').html('Login');
+
+}
+
 $(window).load(function() {
 
-    var theWindow = $(window),
-        $bg = $(".bg"),
-        aspectRatio = $bg.width() / $bg.height();
+    resizeBg();
 
-
-    // Allow caption overflow for smaller devices
-    $('.carousel-inner').css('min-height', $('.carousel-caption').height() + 'px');
-
-    function resizeBg() {
-
-        if ((theWindow.width() / theWindow.height()) < aspectRatio) {
-            $bg
-                .removeClass('bgwidth')
-                .addClass('bgheight');
-        } else {
-            $bg
-                .removeClass('bgheight')
-                .addClass('bgwidth');
-        }
-
-    }
-
-    function showLogIn() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-
-        $('.veed-login-toggle').data('login', 'signup');
-
-        $('#password2').fadeOut('slow');
-        $('#name').fadeOut('slow');
-
-        $('.veed-login-toggle').html('Return to signup');
-        $('#veed-signup').html('Login');
-
-    }
-
-    function showSignUp() {
-
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-
-        $('.veed-login-toggle').data('login', 'login');
-
-        $('#password2').fadeIn('slow');
-        $('#name').fadeIn('slow');
-
-        $('#veed-signup').html('Sign Up');
-        $('.veed-login-toggle').html('Login');
-
-    }
-
-    theWindow.resize(resizeBg).trigger("resize");
+    $(window).resize(resizeBg).trigger("resize");
 
     $('#veed-howitworks').click(function() {
 

@@ -6,12 +6,17 @@ body {
     background-color: #ddd;
 }
 
-.bgwidth { width: 100%; }
-
-.bgheight { height: 100%; }
-
-.carousel-caption {
-    top: 5%;
+#bg {
+    position:relative;
+    width:100%;
+    min-height:760px;
+    height:auto;
+    background-image:url(../images/bgimage-smaller.jpg);
+    background-size:cover;
+    background-position:center center;
+    text-align:center;
+    color:#fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 .signup_page_form {
@@ -159,4 +164,11 @@ fieldset[disabled] .btn-warning.active {
     .veed-footer > .col-md-8 {
         margin-top: 15px;
     }
+}
+.veed-caption-wrap {
+    position: relative;
+}
+
+.veed-carousel-content {
+    margin-top: 5%;
 }
