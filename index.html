@@ -25,44 +25,58 @@
 ================================================== -->
         <div id="veed-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active bg">
-                    <img id="bg" class="bg header-image" src="images/headerimage.jpg" alt="">
+                <div id="bg" class="item active">
                     <div class="container">
-                        <div class="carousel-caption">
-                            <img class="veed-logo" src="images/veed-logo.png">
-                            <h3>Veed.me is the ONLY video production marketplace
-                            <br/>made by filmmakers, for fimmakers.</h3>
-                            <p>Sign up, Get jobs, GET PAID</p>
-                            <div class="row">
-                                <form role="form" class="col-md-4 col-md-offset-4 signup_page_form">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" placeholder="full name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="password1" placeholder="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="password2" placeholder="password confirm">
-                                    </div>
-                                    <button id="veed-signup" type="submit" class="btn btn-info">Sign Up</button>
-                                    <p><a class="veed-login-toggle" href="#" data-login="login">Or Log-in</a></p>
-                                </form>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-4 veed-findoutmore">
-                                    <button id="veed-howitworks" class="btn btn-lg btn-warning btn-block">Learn how it works</button>
+                       <div class="row veed-carousel-row">
+                           <div class="col-md-12 veed-carousel-content">
+                               <div class="col-md-4 col-md-offset-4">
+                                    <a href="http://www.veed.me">
+                                        <img class="veed-logo" src="images/veed-logo.png">
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
+                               <div class="col-md-12 text-center">
+                                    <h3>
+                                       Veed.me is the ONLY video production marketplace
+                                        <br/>
+                                        made by filmmakers, for fimmakers.
+                                    </h3>
+                                    <p>Sign up, Get jobs, GET PAID</p>
+                                </div>
+                               <div class="col-md-4 col-md-offset-4">
+                                   <div class="row">
+                                       <form role="form" class="col-md-12 signup_page_form">
+                                           <div class="form-group">
+                                               <input type="text" class="form-control" id="name" placeholder="full name">
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="email" class="form-control" id="email" placeholder="email">
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="password" class="form-control" id="password1" placeholder="password">
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="password" class="form-control" id="password2" placeholder="password confirm">
+                                           </div>
+                                           <button id="veed-signup" type="submit" class="btn btn-info">Sign Up</button>
+                                           <p><a class="veed-login-toggle" href="#" data-login="login">Or Log-in</a></p>
+                                       </form>
+                                   </div>
+                                   <div class="row veed-howitworks-wrap">
+                                       <div class="veed-findoutmore">
+                                           <button id="veed-howitworks" class="btn btn-lg btn-warning btn-block">Learn how it works</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
                     </div>
-                    <div class="corner-caption hidden-xs">
-                       <blockquote>
-                            <h3>Lorium Ipsum changed my life!</h3>
-                            <footer>Creators Name, City</footer>
-                       </blockquote>
+                    <div class="row pull-left corner-caption">
+                       <div class="col-md-12">
+                           <blockquote>
+                               <h3>Lorium Ipsum changed my life!</h3>
+                               <footer>Creators Name, City</footer>
+                           </blockquote>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -127,12 +141,18 @@
                 <div class="col-md-12">
                     <h2 class="text-center">Start making money, doing the thing you love</h2>
                 </div>
-                <div class="col-md-4 col-md-offset-4 veed-footer">
-                    <button class="veed-login-btn col-md-4 btn-info btn-lg btn btn-default">Login</button>
-                    <button class="veed-signup-btn col-md-7 col-md-offset-1 btn-info btn-lg btn btn-default">Sign Me Up</button>
-                </div>
             </div>
-            
+           <div class="row">
+               <div class="col-md-8 col-md-offset-2 veed-footer">
+                   <div class="col-md-4">
+                       <button class="veed-login-btn btn-block btn-info btn-lg btn">Login</button>
+                   </div>
+                   <div class="col-md-8">
+                       <button class="veed-signup-btn btn-block btn-info btn-lg btn">Sign Me Up</button>
+                   </div>
+               </div>
+           </div>
+
             <!-- FOOTER -->
             <footer>
                 <p class="pull-right"><a href="#">Back to top</a></p>

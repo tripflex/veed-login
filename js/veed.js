@@ -1,59 +1,51 @@
+function resizeBg() {
+
+    var view_height = $(window).height();
+    var quote_height = $('.corner-caption').height();
+    var carousel_row_height = $('.veed-carousel-row').height();
+
+    var bg_content_height = (quote_height + carousel_row_height);
+    
+    $('#bg').css('height', view_height).css('min-height', bg_content_height);
+
+}
+
+function showLogIn() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+
+    $('.veed-login-toggle').data('login', 'signup');
+
+    $('#password2').fadeOut('slow');
+    $('#name').fadeOut('slow');
+
+    $('.veed-login-toggle').html('Return to signup');
+    $('#veed-signup').html('Login');
+
+}
+
+function showSignUp() {
+
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+
+    $('.veed-login-toggle').data('login', 'login');
+
+    $('#password2').fadeIn('slow');
+    $('#name').fadeIn('slow');
+
+    $('#veed-signup').html('Sign Up');
+    $('.veed-login-toggle').html('Login');
+
+}
+
 $(window).load(function() {
 
-    var theWindow = $(window),
-        $bg = $(".bg"),
-        aspectRatio = $bg.width() / $bg.height();
+    resizeBg();
 
-
-    // Allow caption overflow for smaller devices
-    $('.carousel-inner').css('min-height', $('.carousel-caption').height() + 'px');
-
-    function resizeBg() {
-
-        if ((theWindow.width() / theWindow.height()) < aspectRatio) {
-            $bg
-                .removeClass('bgwidth')
-                .addClass('bgheight');
-        } else {
-            $bg
-                .removeClass('bgheight')
-                .addClass('bgwidth');
-        }
-
-    }
-
-    function showLogIn() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-
-        $('.veed-login-toggle').data('login', 'signup');
-
-        $('#password2').fadeOut('slow');
-        $('#name').fadeOut('slow');
-
-        $('.veed-login-toggle').html('Return to signup');
-        $('#veed-signup').html('Login');
-
-    }
-
-    function showSignUp() {
-
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-
-        $('.veed-login-toggle').data('login', 'login');
-
-        $('#password2').fadeIn('slow');
-        $('#name').fadeIn('slow');
-
-        $('#veed-signup').html('Sign Up');
-        $('.veed-login-toggle').html('Login');
-
-    }
-
-    theWindow.resize(resizeBg).trigger("resize");
+    $(window).resize(resizeBg).trigger("resize");
 
     $('#veed-howitworks').click(function() {
 
