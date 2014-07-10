@@ -5,7 +5,7 @@ function resizeBg() {
     var carousel_row_height = $('.veed-carousel-row').height();
 
     var bg_content_height = (quote_height + carousel_row_height);
-    
+
     $('#bg').css('height', view_height).css('min-height', bg_content_height);
 
 }
@@ -20,7 +20,7 @@ function showLogIn() {
     $('#password2').fadeOut('slow');
     $('#name').fadeOut('slow');
 
-    $('.veed-login-toggle').html('Return to signup');
+    $('.veed-login-toggle').html('Return to Signup');
     $('#veed-signup').html('Login');
 
 }
@@ -37,7 +37,7 @@ function showSignUp() {
     $('#name').fadeIn('slow');
 
     $('#veed-signup').html('Sign Up');
-    $('.veed-login-toggle').html('Login');
+    $('.veed-login-toggle').html('Or Log-in');
 
 }
 
